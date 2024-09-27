@@ -44,8 +44,8 @@ Machine learning and neural networks were used to build a tool for the nonprofit
   - Output layer
 
 - **Activation Functions**:
-  - **Hidden Layers**: ReLU (Rectified Linear Unit) to introduce non-linearity and help with learning complex patterns.
-  - **Output Layer**: Sigmoid activation function to predict probabilities for binary classification (success or failure).
+  - **Hidden Layers**: ReLU (Rectified Linear Unit) 
+  - **Output Layer**: Sigmoid 
 
 #### Model Performance
 
@@ -69,8 +69,8 @@ Machine learning and neural networks were used to build a tool for the nonprofit
   - Output layer
 
 - **Activation Functions**:
-  - **Hidden Layers**: ReLU (Rectified Linear Unit) for both layers to capture complex patterns.
-  - **Output Layer**: Sigmoid activation function for binary classification.
+  - **Hidden Layers**: ReLU (Rectified Linear Unit)
+  - **Output Layer**: Sigmoid 
 
 #### Model Performance
 
@@ -83,19 +83,19 @@ Machine learning and neural networks were used to build a tool for the nonprofit
 #### Steps Taken to Increase Model Performance
 
 1. **Increased Neurons**:
-   - Both hidden layers were increased to 100 neurons to allow the model to learn more complex representations.
+   - Both hidden layers were increased to 100 neurons.
 
 2. **Batch Normalization**:
-   - Added batch normalization layers after each hidden layer to stabilize and accelerate training.
+   - Added batch normalization layers after each hidden layer.
 
 3. **Dropout Regularization**:
-   - Implemented dropout layers (20%) to reduce the risk of overfitting by randomly disabling neurons during training.
+   - Implemented dropout layers (20%) to reduce the risk of overfitting.
 
 4. **Learning Rate Adjustment**:
-   - Used a learning rate of 0.009 with the Adam optimizer to improve convergence.
+   - Used a learning rate of 0.009.
 
 5. **Increased Epochs**:
-   - Increased the number of epochs to 200 to provide more training time for the model.
+   - Increased the number of epochs to 200.
 
 6. **Validation Split**:
    - Continued using a validation split of 20% to monitor performance and mitigate overfitting.
@@ -116,8 +116,8 @@ Machine learning and neural networks were used to build a tool for the nonprofit
   - Output layer
 
 - **Activation Functions**:
-  - **Hidden Layers**: Sigmoid activation function to capture non-linear relationships.
-  - **Output Layer**: Sigmoid activation function for binary classification.
+  - **Hidden Layers**: Sigmoid 
+  - **Output Layer**: Sigmoid 
 
 #### Model Performance
 
@@ -130,22 +130,22 @@ Machine learning and neural networks were used to build a tool for the nonprofit
 #### Steps Taken to Increase Model Performance
 
 1. **Increased Layers**:
-   - Added a total of four hidden layers with 80 neurons each to enhance the model's capacity to learn complex patterns.
+   - Added a total of four hidden layers with 80 neurons each.
 
 2. **Activation Function Change**:
-   - Changed the activation function from ReLU to Sigmoid for hidden layers, which can help when dealing with smaller datasets.
+   - Changed the activation function from ReLU to Sigmoid for hidden layers.
 
 3. **Batch Normalization**:
-   - Continued using batch normalization after each hidden layer to stabilize training.
+   - Continued using batch normalization after each hidden layer.
 
 4. **Dropout Regularization**:
    - Retained dropout layers (20%) to mitigate overfitting.
 
 5. **Learning Rate Adjustment**:
-   - Adjusted the learning rate to 0.001 to improve convergence speed.
+   - Adjusted the learning rate to 0.001.
 
 6. **Increased Batch Size**:
-   - Increased the batch size to 200 for potentially more stable gradient estimates.
+   - Increased the batch size to 200.
 
 7. **Reduced Epochs**:
    - Limited training to 15 epochs to quickly assess model performance without overfitting.
@@ -166,8 +166,8 @@ Machine learning and neural networks were used to build a tool for the nonprofit
   - Output layer
 
 - **Activation Functions**:
-  - **Hidden Layers**: Sigmoid activation function to capture non-linear relationships.
-  - **Output Layer**: Sigmoid activation function for binary classification.
+  - **Hidden Layers**: Sigmoid
+  - **Output Layer**: Sigmoid
 
 #### Model Performance
 
@@ -180,22 +180,22 @@ Machine learning and neural networks were used to build a tool for the nonprofit
 #### Steps Taken to Increase Model Performance
 
 1. **Adjusted Neurons**:
-   - Used a mix of 80 and 100 neurons across hidden layers to better capture the data's complexity.
+   - Used a mix of 80 and 100 neurons across hidden layers.
 
 2. **Activation Function**:
    - Continued using the sigmoid activation function for all hidden layers to maintain consistency.
 
 3. **Batch Normalization**:
-   - Implemented batch normalization after each hidden layer to stabilize learning and improve convergence speed.
+   - Implemented batch normalization after each hidden layer.
 
 4. **Dropout Regularization**:
    - Maintained dropout layers (20%) to reduce overfitting.
 
 5. **Learning Rate**:
-   - Kept the learning rate at 0.001 for steady convergence.
+   - Kept the learning rate at 0.001.
 
 6. **Batch Size**:
-   - Increased the batch size to 50 for potentially more stable gradient estimates.
+   - Increased the batch size to 50.
 
 7. **Limited Epochs**:
    - Limited training to 15 epochs to quickly evaluate performance without overfitting.
@@ -206,23 +206,9 @@ Machine learning and neural networks were used to build a tool for the nonprofit
 
 The deep learning models developed for the Alphabet Soup charity funding prediction task have shown varying performance, but none achieved the target accuracy of over 75%. 
 
-### Summary of Findings
-
 - All models consistently performed below the desired accuracy threshold, indicating that further tuning is required. 
 - While the introduction of additional layers and neurons, as well as regularization techniques like batch normalization and dropout, helped to marginally improve performance, the results suggest that the models are still struggling to effectively capture the underlying patterns in the data.
 
 ### Recommendation
 
-To potentially improve the performance of the classification problem, I recommend exploring ensemble methods, such as **Random Forest** or **Gradient Boosting** (e.g., XGBoost). 
-
-**Reasons for Recommendation**:
-
-1. **Better Handling of Non-Linearity**: Ensemble methods can capture complex interactions and non-linear relationships between features more effectively than a single neural network.
-
-2. **Robustness to Overfitting**: These methods generally include built-in mechanisms to reduce overfitting, such as feature selection and regularization, which could enhance performance on this dataset.
-
-3. **Interpretability**: Random Forest and Gradient Boosting models often provide better insights into feature importance, which can be valuable for understanding which factors most influence funding success.
-
-4. **Less Hyperparameter Tuning Required**: While neural networks can require extensive tuning of hyperparameters, ensemble methods often perform well with default settings, reducing the time and complexity of model optimization.
-
-In conclusion, while the deep learning models provided a good foundation, shifting to ensemble methods could yield better predictive accuracy and provide a more robust solution for the classification task at hand.
+To improve model performance, I recommend using ensemble methods, such as **Random Forest** and **Gradient Boosting**. In Breiman, L. (2001). "Random Forests". Machine Learning, the Random Forest algorithm is shown to be accurate and robust and helps to avoid overfitting. In Chen, T., & Guestrin, C. (2016). "XGBoost: A Scalable Tree Boosting System", XGBoost is shown to outperform other algorithms in terms of predictive accuracy. In conclusion, while the deep learning models provided a good foundation, shifting to ensemble methods could yield better predictive accuracy and provide a more robust way to improve the model.
