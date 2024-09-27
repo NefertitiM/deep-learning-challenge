@@ -9,23 +9,26 @@ Machine learning and neural networks were used to build a tool for the nonprofit
 ### Data Preprocessing
 
 - **Target Variable**: 
-  - `IS_SUCCESSFUL`: This variable indicates if the funding was used effectively (1 for successful, 0 for unsuccessful).
+  - `IS_SUCCESSFUL`: This variable indicates if the funding was used effectively (1 for successful, 0 for unsuccessful) and was chosen as the target variable.
 
 - **Feature Variables**: 
-  - `APPLICATION_TYPE`: Type of application submitted.
-  - `AFFILIATION`: The sector the organization is affiliated with.
-  - `CLASSIFICATION`: Government classification of the organization.
-  - `USE_CASE`: Specific use case for which funding is requested.
-  - `ORGANIZATION`: Type of organization applying.
-  - `STATUS`: Current active status of the organization.
-  - `INCOME_AMT`: Classification of the organization's income.
-  - `SPECIAL_CONSIDERATIONS`: Any special notes regarding the application.
-  - `ASK_AMT`: Amount of funding requested.
+  - `APPLICATION_TYPE`: Alphabet Soup application type.
+  - `AFFILIATION`: Affiliated sector of industry.
+  - `CLASSIFICATION`: Government organization classification.
+  - `USE_CASE`: Use case for funding.
+  - `ORGANIZATION`: Organization type.
+  - `STATUS`: Active status.
+  - `INCOME_AMT`: Income classification.
+  - `SPECIAL_CONSIDERATIONS`: Special considerations for application.
+  - `ASK_AMT`: Funding amount requested.
 
+    All of these variables were chosen as features because they have impact the success of the organizations.
+    
 - **Variables to Remove**: 
-  - `EIN`: Identification number of the organization (not useful for prediction).
-  - `NAME`: Name of the organization (not useful for prediction).
+  - `EIN`: Identification number of the organization.
+  - `NAME`: Name of the organization.
 
+     These variables were dropped because they don't tell us anything about the potential the success of the organizations.
 ---
 
 ### Compiling, Training, and Evaluating the Model
