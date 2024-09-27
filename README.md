@@ -1,4 +1,4 @@
-# deep-learning-challenge
+# Deep Learning Challenge
 
 Machine learning and neural networks were used to build a tool for the nonprofit foundation, Alphabet Soup, that can help predict the success of organizations applying for their funding. A CSV with more than 34,000 organizations funded by Alphabet Soup, over several years, was provided. Key features in the dataet was used to create a binary classifier that correlate with successful funded organization and can predict successful applicants.
  
@@ -48,7 +48,7 @@ Machine learning and neural networks were used to build a tool for the nonprofit
   - **Hidden Layers**: ReLU (Rectified Linear Unit) to introduce non-linearity and help with learning complex patterns.
   - **Output Layer**: Sigmoid activation function to predict probabilities for binary classification (success or failure).
 
-### Model Performance
+##### Model Performance
 
 - **Achieved Accuracy**: 
   - The original model achieved an accuracy of approximately 72.55%, which is below the target performance of over 75%.
@@ -73,7 +73,7 @@ Machine learning and neural networks were used to build a tool for the nonprofit
   - **Hidden Layers**: ReLU (Rectified Linear Unit) for both layers to capture complex patterns.
   - **Output Layer**: Sigmoid activation function for binary classification.
 
-### Model Performance
+##### Model Performance
 
 - **Achieved Accuracy**: 
   - The optimized model achieved an accuracy of approximately 72.93%, still below the target performance of over 75%.
@@ -81,7 +81,7 @@ Machine learning and neural networks were used to build a tool for the nonprofit
 - **Model Loss**: 
   - The loss was approximately 0.5554, indicating slight improvement compared to the original model.
 
-### Steps Taken to Increase Model Performance
+##### Steps Taken to Increase Model Performance
 
 1. **Increased Neurons**:
    - Both hidden layers were increased to 100 neurons to allow the model to learn more complex representations.
@@ -120,7 +120,7 @@ Machine learning and neural networks were used to build a tool for the nonprofit
   - **Hidden Layers**: Sigmoid activation function to capture non-linear relationships.
   - **Output Layer**: Sigmoid activation function for binary classification.
 
-### Model Performance
+##### Model Performance
 
 - **Achieved Accuracy**: 
   - The optimized model achieved an accuracy of approximately 72.48%, still below the target performance of over 75%.
@@ -128,7 +128,7 @@ Machine learning and neural networks were used to build a tool for the nonprofit
 - **Model Loss**: 
   - The loss was approximately 0.5610, indicating minimal improvement compared to the previous optimization.
 
-### Steps Taken to Increase Model Performance
+##### Steps Taken to Increase Model Performance
 
 1. **Increased Layers**:
    - Added a total of four hidden layers with 80 neurons each to enhance the model's capacity to learn complex patterns.
@@ -170,7 +170,7 @@ Machine learning and neural networks were used to build a tool for the nonprofit
   - **Hidden Layers**: Sigmoid activation function to capture non-linear relationships.
   - **Output Layer**: Sigmoid activation function for binary classification.
 
-### Model Performance
+##### Model Performance
 
 - **Achieved Accuracy**: 
   - The optimized model achieved an accuracy of approximately 72.54%, still below the target performance of over 75%.
@@ -178,7 +178,7 @@ Machine learning and neural networks were used to build a tool for the nonprofit
 - **Model Loss**: 
   - The loss was approximately 0.5585, indicating minimal improvement compared to previous optimizations.
 
-### Steps Taken to Increase Model Performance
+##### Steps Taken to Increase Model Performance
 
 1. **Adjusted Neurons**:
    - Used a mix of 80 and 100 neurons across hidden layers to better capture the data's complexity.
