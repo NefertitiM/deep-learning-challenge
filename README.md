@@ -33,44 +33,178 @@ Machine learning and neural networks were used to build a tool for the nonprofit
 
 ### Compiling, Training, and Evaluating the Model
 
-- **Neurons, Layers, and Activation Functions**:
-  - **Neurons**: 
-    - First hidden layer: 64 neurons
-    - Second hidden layer: 32 neurons
-  - **Layers**: 
-    - Input layer
-    - Two hidden layers
-    - Output layer
-  - **Activation Functions**: 
-    - ReLU for hidden layers (to introduce non-linearity)
-    - Sigmoid for the output layer (to predict probabilities)
+#### AlphabetSoupCharity Original Model
 
-- **Achieved Target Model Performance**: 
-  - Initially achieved approximately 72.65% accuracy.
-  - Target performance of over 75% was not achieved in the first attempt.
+- **Neurons**:
+  - **First Hidden Layer**: 80 neurons
+  - **Second Hidden Layer**: 30 neurons
 
-- **Steps Taken to Increase Model Performance**:
-  - Experimented with different architectures (adding layers and neurons).
-  - Adjusted activation functions and learning rates.
-  - Increased the number of epochs to allow for more training time.
-  - Utilized dropout layers to reduce overfitting.
-  - Conducted data preprocessing to handle categorical variables effectively.
+- **Layers**:
+  - Input layer
+  - Two hidden layers
+  - Output layer
+
+- **Activation Functions**:
+  - **Hidden Layers**: ReLU (Rectified Linear Unit) to introduce non-linearity and help with learning complex patterns.
+  - **Output Layer**: Sigmoid activation function to predict probabilities for binary classification (success or failure).
+
+### Model Performance
+
+- **Achieved Accuracy**: 
+  - The original model achieved an accuracy of approximately 72.55%, which is below the target performance of over 75%.
+
+- **Model Loss**: 
+  - The loss was approximately 0.5623, indicating room for improvement in the model's predictive capabilities.
+
+
+
+#### AlphabetSoupCharity Optimization 1
+
+- **Neurons**:
+  - **First Hidden Layer**: 100 neurons
+  - **Second Hidden Layer**: 100 neurons
+
+- **Layers**:
+  - Input layer
+  - Two hidden layers with batch normalization and dropout
+  - Output layer
+
+- **Activation Functions**:
+  - **Hidden Layers**: ReLU (Rectified Linear Unit) for both layers to capture complex patterns.
+  - **Output Layer**: Sigmoid activation function for binary classification.
+
+### Model Performance
+
+- **Achieved Accuracy**: 
+  - The optimized model achieved an accuracy of approximately 72.93%, still below the target performance of over 75%.
+
+- **Model Loss**: 
+  - The loss was approximately 0.5554, indicating slight improvement compared to the original model.
+
+### Steps Taken to Increase Model Performance
+
+1. **Increased Neurons**:
+   - Both hidden layers were increased to 100 neurons to allow the model to learn more complex representations.
+
+2. **Batch Normalization**:
+   - Added batch normalization layers after each hidden layer to stabilize and accelerate training.
+
+3. **Dropout Regularization**:
+   - Implemented dropout layers (20%) to reduce the risk of overfitting by randomly disabling neurons during training.
+
+4. **Learning Rate Adjustment**:
+   - Used a learning rate of 0.009 with the Adam optimizer to improve convergence.
+
+5. **Increased Epochs**:
+   - Increased the number of epochs to 200 to provide more training time for the model.
+
+6. **Validation Split**:
+   - Continued using a validation split of 20% to monitor performance and mitigate overfitting.
 
 ---
 
-## Summary
+#### AlphabetSoupCharity Optimization 2
 
-The deep learning model developed in this analysis demonstrated a solid foundation for predicting the success of funding applications, achieving an initial accuracy of approximately 72.65%. However, this was below the desired threshold of 75%. 
+- **Neurons**:
+  - **First Hidden Layer**: 80 neurons
+  - **Second Hidden Layer**: 80 neurons
+  - **Third Hidden Layer**: 80 neurons
+  - **Fourth Hidden Layer**: 80 neurons
 
-### Recommendation for Different Models
-To potentially enhance predictive performance, I recommend exploring the following alternatives:
+- **Layers**:
+  - Input layer
+  - Four hidden layers with batch normalization and dropout
+  - Output layer
 
-1. **Random Forest Classifier**: 
-   - **Pros**: Handles categorical variables well, reduces overfitting through ensemble methods, and provides feature importance metrics.
-   - **Explanation**: Random Forest can capture complex interactions between features without extensive tuning, making it a robust option for this classification problem.
+- **Activation Functions**:
+  - **Hidden Layers**: Sigmoid activation function to capture non-linear relationships.
+  - **Output Layer**: Sigmoid activation function for binary classification.
 
-2. **Gradient Boosting Machines (GBM)**:
-   - **Pros**: Often outperforms other algorithms in classification tasks by focusing on misclassified instances.
-   - **Explanation**: GBM's iterative approach could help refine the predictions further, especially if the dataset has strong feature interactions.
+### Model Performance
 
-By implementing these models alongside the deep learning approach, we could achieve more reliable predictions for the success of funding applications.
+- **Achieved Accuracy**: 
+  - The optimized model achieved an accuracy of approximately 72.48%, still below the target performance of over 75%.
+
+- **Model Loss**: 
+  - The loss was approximately 0.5610, indicating minimal improvement compared to the previous optimization.
+
+### Steps Taken to Increase Model Performance
+
+1. **Increased Layers**:
+   - Added a total of four hidden layers with 80 neurons each to enhance the model's capacity to learn complex patterns.
+
+2. **Activation Function Change**:
+   - Changed the activation function from ReLU to Sigmoid for hidden layers, which can help when dealing with smaller datasets.
+
+3. **Batch Normalization**:
+   - Continued using batch normalization after each hidden layer to stabilize training.
+
+4. **Dropout Regularization**:
+   - Retained dropout layers (20%) to mitigate overfitting.
+
+5. **Learning Rate Adjustment**:
+   - Adjusted the learning rate to 0.001 to improve convergence speed.
+
+6. **Increased Batch Size**:
+   - Increased the batch size to 200 for potentially more stable gradient estimates.
+
+7. **Reduced Epochs**:
+   - Limited training to 15 epochs to quickly assess model performance without overfitting.
+
+---
+
+#### AlphabetSoupCharity Optimization 3
+
+- **Neurons**:
+  - **First Hidden Layer**: 80 neurons
+  - **Second Hidden Layer**: 100 neurons
+  - **Third Hidden Layer**: 80 neurons
+  - **Fourth Hidden Layer**: 100 neurons
+
+- **Layers**:
+  - Input layer
+  - Four hidden layers with batch normalization and dropout
+  - Output layer
+
+- **Activation Functions**:
+  - **Hidden Layers**: Sigmoid activation function to capture non-linear relationships.
+  - **Output Layer**: Sigmoid activation function for binary classification.
+
+### Model Performance
+
+- **Achieved Accuracy**: 
+  - The optimized model achieved an accuracy of approximately 72.54%, still below the target performance of over 75%.
+
+- **Model Loss**: 
+  - The loss was approximately 0.5585, indicating minimal improvement compared to previous optimizations.
+
+### Steps Taken to Increase Model Performance
+
+1. **Adjusted Neurons**:
+   - Used a mix of 80 and 100 neurons across hidden layers to better capture the data's complexity.
+
+2. **Activation Function**:
+   - Continued using the sigmoid activation function for all hidden layers to maintain consistency.
+
+3. **Batch Normalization**:
+   - Implemented batch normalization after each hidden layer to stabilize learning and improve convergence speed.
+
+4. **Dropout Regularization**:
+   - Maintained dropout layers (20%) to reduce overfitting.
+
+5. **Learning Rate**:
+   - Kept the learning rate at 0.001 for steady convergence.
+
+6. **Batch Size**:
+   - Increased the batch size to 50 for potentially more stable gradient estimates.
+
+7. **Limited Epochs**:
+   - Limited training to 15 epochs to quickly evaluate performance without overfitting.
+
+---
+
+
+
+
+
+
