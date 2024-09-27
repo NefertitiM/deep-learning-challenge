@@ -1,10 +1,7 @@
 # deep-learning-challenge
 
-# Overview of the Analysis
-The purpose of this analysis is to develop a machine learning model using deep learning techniques to predict the success of organizations applying for funding from the Alphabet Soup nonprofit foundation. By analyzing historical data, we aim to identify key features that correlate with successful funding utilization and provide a tool for improved applicant selection.
-The nonprofit foundation Alphabet Soup wants a tool that can help it select the applicants for funding with the best chance of success in their ventures. With your knowledge of machine learning and neural networks, you’ll use the features in the provided dataset to create a binary classifier that can predict whether applicants will be successful if funded by Alphabet Soup.
-From Alphabet Soup’s business team, you have received a CSV containing more than 34,000 organizations that have received funding from Alphabet Soup over the years. Within this dataset are a number of columns that capture metadata about each organization, such as:
-
+Machine learning and neural networks were used to build a tool for the nonprofit foundation, Alphabet Soup, that can help predict the success of organizations applying for their funding. A CSV with more than 34,000 organizations funded by Alphabet Soup, over several years, was provided. Key features in the dataet was used to create a binary classifier that correlate with successful funded organization and can predict successful applicants.
+ 
 ---
 
 ## Results
@@ -12,7 +9,7 @@ From Alphabet Soup’s business team, you have received a CSV containing more th
 ### Data Preprocessing
 
 - **Target Variable**: 
-  - `IS_SUCCESSFUL`: This binary variable indicates whether the funding was used effectively (1 for successful, 0 for unsuccessful).
+  - `IS_SUCCESSFUL`: This variable indicates if the funding was used effectively (1 for successful, 0 for unsuccessful).
 
 - **Feature Variables**: 
   - `APPLICATION_TYPE`: Type of application submitted.
